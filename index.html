@@ -2,22 +2,20 @@
 <html lang="en" class="h-full">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZHJW9SB01"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZHJW9SB01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-BZHJW9SB01');
-</script>
+      gtag('config', 'G-BZHJW9SB01');
+    </script>
     
-    <meta charset="UTF-m">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags (Defaults) -->
-    <!-- This title is updated by JavaScript -->
     <title>Wildland Pest Control - Plymouth, MA</title> 
-    <!-- This description is updated by JavaScript -->
     <meta name="description" content="Eco-friendly pest control for Plymouth, MA. We specialize in ticks, rodents (mice, rats), and stinging insects using safe, effective solutions.">
 
     <!-- Tailwind CSS -->
@@ -26,7 +24,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@0.363.0/dist/umd/lucide.min.js"></script>
@@ -40,30 +38,12 @@
       "telephone": "(508) 503-9886",
       "email": "Paulr@wildlandpest.com",
       "areaServed": [
-        {
-          "@type": "Place",
-          "name": "Plymouth"
-        },
-        {
-          "@type": "Place",
-          "name": "Kingston"
-        },
-        {
-          "@type": "Place",
-          "name": "Carver"
-        },
-        {
-          "@type": "Place",
-          "name": "Wareham"
-        },
-        {
-          "@type": "Place",
-          "name": "Plympton"
-        },
-        {
-          "@type": "Place",
-          "name":"Sagamore"
-        }
+        { "@type": "Place", "name": "Plymouth" },
+        { "@type": "Place", "name": "Kingston" },
+        { "@type": "Place", "name": "Carver" },
+        { "@type": "Place", "name": "Wareham" },
+        { "@type": "Place", "name": "Plympton" },
+        { "@type": "Place", "name":"Sagamore" }
       ],
       "description": "Environmentally-friendly and effective pest control services for ticks, rodents, and insects in Plymouth, MA and surrounding towns."
     }
@@ -127,11 +107,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" data-page="home" class="nav-link-logo">
-                        <!-- *** LOGO UPDATED HERE *** -->
                         <img src="/photos/logo.webp" 
                              alt="Wildland Pest Control Logo" 
                              class="h-10 md:h-12 w-auto"
-                             onerror="this.style.display='none'; this.after(document.createTextNode('Wildland Pest Control'))"> <!-- Fallback text if logo fails to load -->
+                             onerror="this.style.display='none'; this.after(document.createTextNode('Wildland Pest Control'))">
                     </a>
                 </div>
                 
@@ -192,11 +171,6 @@
             <div class="bg-white rounded-lg shadow-xl overflow-hidden">
                 <!-- Hero Image -->
                 <div class="relative">
-                    <!-- 
-                      FIX: The placeholder image had text "Eco-Friendly Pest Control" 
-                      baked into it, which clashed with the overlay text.
-                      I've changed the placeholder to a simple green background by removing the text query.
-                    -->
                     <img class="h-56 w-full object-cover sm:h-72 md:h-96" src="/photos/mouse.webp" alt="Wildland Pest Control hero image">
                     <div class="absolute inset-0 bg-gray-700 bg-opacity-60"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -226,7 +200,8 @@
                 <h1 class="text-3xl font-bold text-gray-900 mb-6">Our Services</h1>
                 <p class="text-lg text-gray-700 mb-8">We offer a range of targeted, eco-friendly services to protect your home and property. All services are performed by a licensed and insured professional.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     
                     <!-- Service Item -->
                     <div class="flex items-start space-x-4">
@@ -305,11 +280,50 @@
                             <p class="mt-1 text-gray-600">Safe and environmentally-friendly trapping programs for wasps, hornets, and yellow jackets. We strategically place traps to capture queens in the spring and reduce nest-building activity all season.</p>
                         </div>
                     </div>
+                </div>
 
+                <!-- PRICING SECTION -->
+                <div class="border-t border-gray-200 pt-12 mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Rodent Baiting Pricing</h2>
+                    <p class="text-gray-700 mb-8 max-w-3xl">
+                        Our rodent control programs are designed to be both effective and straightforward. All stations are placed on the exterior of the home to target rodents where they live and travel, stopping them before they get inside. Pricing is consistent regardless of the type of bait used (rodenticide or contraceptive).
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Pricing Card 1 -->
+                        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                            <div class="flex items-center text-green-600 font-semibold mb-2">
+                                <i data-lucide="dollar-sign" class="h-5 w-5 mr-1"></i>
+                                Initial Setup
+                            </div>
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-4xl font-extrabold text-gray-900">$69</span>
+                                <span class="ml-2 text-gray-500">/ station</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                A minimum of 4 stations is required for effective coverage of a standard home, for a total starting price of <strong class="text-gray-900">$276</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Pricing Card 2 -->
+                        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                            <div class="flex items-center text-green-600 font-semibold mb-2">
+                                <i data-lucide="refresh-cw" class="h-5 w-5 mr-1"></i>
+                                Follow-up & Refill
+                            </div>
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-4xl font-extrabold text-gray-900">$29</span>
+                                <span class="ml-2 text-gray-500">/ station per visit</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Each follow-up visit includes cleaning, maintaining, and refilling the bait stations to ensure the program remains effective.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Locations Section -->
-                <div class="mt-16 pt-8 border-t border-gray-200">
+                <div class="pt-8 border-t border-gray-200">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Service Area</h2>
                     <p class="text-lg text-gray-700 mb-8">We are proud to serve Plymouth, Massachusetts, and our neighbors in the surrounding towns. Our local focus allows us to provide prompt, reliable service.</p>
                     
@@ -526,13 +540,12 @@
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                         <h2 class="text-2xl font-semibold text-green-700 mb-4">Theoretical LD50 Calculator</h2>
                         <p class="mb-4">This tool estimates the number of bait blocks an animal would need to consume to reach the LD50 (Lethal Dose, 50%) based on the product's active ingredient (AI) and the animal's body weight. The LD50 is the dose required to kill half the members of a tested population.</p>
-                        <!-- UPDATED NOTE -->
+                        
                         <p class="mb-4 text-sm text-gray-600"><strong>Note:</strong> This calculator is hard-coded for a specific product example: a <strong>1 oz (28.35g) bait block</strong> containing <strong>0.005% active ingredient (approx 1.42mg)</strong>. The LD50 ratio is assumed at 1.47mg/kg.</p>
                         
                         <div class="space-y-4">
                             <div>
                                 <label for="animal-weight" class="block text-sm font-medium text-gray-700">1. Animal's Weight (in lbs)</label>
-                                <!-- UPDATED INPUT FIELD -->
                                 <input type="text" id="animal-weight" inputmode="decimal" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\./g, '$1')" class="mt-1 block w-full md:w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" placeholder="e.g., 20">
                             </div>
                             
@@ -603,23 +616,11 @@
                                     <a href="mailto:Paulr@wildlandpest.com" class="text-lg text-white font-bold hover:underline">Paulr@wildlandpest.com</a>
                                 </div>
                             </div>
-                            
-                            <!-- Mailing Address (Commented Out) -->
-                            <!--
-                            <div class="flex items-start space-x-4">
-                                <i data-lucide="mailbox" class="h-6 w-6 text-green-200 mt-1"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold">Mailing Address</h3>
-                                    <p class="text-lg text-green-100">PO Box TBD</p>
-                                </div>
-                            </div>
-                            -->
                         </div>
                     </div>
                     
                     <!-- Image -->
                     <div class="hidden md:block">
-                        <!-- FIX: Changed placeholder color to match theme and removed text -->
                         <img src="/photos/mouse.webp" alt="Contact" class="h-full w-full object-cover">
                     </div>
                 </div>
@@ -698,7 +699,6 @@
                 window.scrollTo(0, 0);
 
                 // Initialize icons
-                // *** FIX HERE: Check if lucide is loaded before calling it ***
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
@@ -802,10 +802,8 @@
 
                 calculateBtn.addEventListener('click', function() {
                     const weightLbs = parseFloat(weightInput.value);
-                    // UPDATED: 1 oz (28349.5mg) * 0.005% (0.00005) = 1.417475 mg
                     const aiPerBlock = 1.417475; 
                     
-                    // UPDATED Validation
                     if (isNaN(weightLbs) || weightLbs <= 0) {
                         resultText.innerHTML = '<span class="font-semibold text-red-600">Please enter a valid, positive number for weight.</span>';
                         resultDiv.classList.remove('hidden');
@@ -838,7 +836,3 @@
     </script>
 </body>
 </html>
-
-
-
-
