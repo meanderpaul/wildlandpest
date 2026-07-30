@@ -72,6 +72,23 @@
         .faq-arrow {
             transition: transform 0.3s ease;
         }
+        /* DIY expandable cards */
+        .diy-body {
+            transition: max-height 0.35s ease-out, opacity 0.25s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .diy-card.open .diy-body {
+            max-height: 2500px;
+            opacity: 1;
+        }
+        .diy-card.open .diy-arrow {
+            transform: rotate(180deg);
+        }
+        .diy-arrow {
+            transition: transform 0.3s ease;
+        }
         /* Custom map embed styles */
         .map-container {
             position: relative;
@@ -115,17 +132,19 @@
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex md:space-x-8">
+                <div class="hidden md:flex md:items-center md:space-x-8">
                     <a href="#" data-page="home" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">Home</a>
                     <a href="#" data-page="services" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">Services & Locations</a>
                     <a href="#" data-page="diy" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">DIY Tips</a>
                     <a href="#" data-page="faq" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">FAQ</a>
                     <a href="#" data-page="safety" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">Safety & Labels</a>
                     <a href="#" data-page="contact" class="nav-link text-gray-500 hover:text-gray-900 px-1 py-4 text-sm font-medium">Contact</a>
+                    <a href="tel:508-503-9886" class="text-green-700 hover:text-green-800 text-sm font-semibold whitespace-nowrap">(508) 503-9886</a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
+                <!-- Mobile: phone + menu -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <a href="tel:508-503-9886" class="text-green-700 hover:text-green-800 text-sm font-semibold whitespace-nowrap">(508) 503-9886</a>
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
                         <span class="sr-only">Open main menu</span>
                         <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -189,6 +208,71 @@
                         <p>Whether you're dealing with ticks in the yard, rodents in the attic, or stinging insects too close for comfort, we have the expertise to handle it. We specialize in solutions that are tough on pests but gentle on the ecosystem, including innovative options like rodent contraceptives and targeted trapping.</p>
                         <p>At Wildland Pest Control, we're not just a service; we're your neighbors. We are committed to providing transparent, honest, and reliable service to our community. Explore our services to learn more about how we can help you reclaim your home.</p>
                     </div>
+
+                    <!-- Credentials / Badges -->
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <p class="text-sm font-semibold uppercase tracking-wide text-gray-500 text-center mb-6">Licensed &amp; Certified</p>
+
+                        <!-- MA PAC expandable -->
+                        <div class="diy-card border border-green-200 rounded-xl overflow-hidden bg-green-50 hover:border-green-300 transition-colors mb-4">
+                            <button type="button" class="diy-toggle w-full flex items-start gap-4 text-left p-4 sm:p-5 hover:bg-green-100/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-inset">
+                                <span class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
+                                    <i data-lucide="badge-check" class="h-6 w-6"></i>
+                                </span>
+                                <span class="flex-1 min-w-0">
+                                    <span class="block font-semibold text-gray-900">MA PAC Licensed</span>
+                                    <span class="block mt-1 text-sm text-gray-600">Massachusetts Problem Animal Control agent — tap to see covered animals</span>
+                                </span>
+                                <i data-lucide="chevron-down" class="diy-arrow flex-shrink-0 h-6 w-6 text-gray-400 mt-1"></i>
+                            </button>
+                            <div class="diy-body">
+                                <div class="px-4 sm:px-5 pb-5 pt-0 border-t border-green-100 mx-4 sm:mx-5">
+                                    <p class="pt-4 text-sm text-gray-700 mb-3">Animals a licensed PAC agent may legally handle in Massachusetts:</p>
+                                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                                        <li>Bats (certain species)</li>
+                                        <li>Beaver</li>
+                                        <li>Chipmunk</li>
+                                        <li>Coyote <span class="text-gray-500">(requires coyote certification)</span></li>
+                                        <li>Fox (red and gray)</li>
+                                        <li>House sparrow</li>
+                                        <li>Mice</li>
+                                        <li>Moles</li>
+                                        <li>Muskrat</li>
+                                        <li>Norway rat</li>
+                                        <li>Opossum</li>
+                                        <li>Pigeon</li>
+                                        <li>Porcupine</li>
+                                        <li>Rabbit</li>
+                                        <li>Raccoon</li>
+                                        <li>Skunk</li>
+                                        <li>Snapping turtle</li>
+                                        <li>Squirrels (red, gray, flying)</li>
+                                        <li>Starling</li>
+                                        <li>Voles</li>
+                                        <li>Weasel</li>
+                                        <li>Woodchuck</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex flex-col items-center text-center p-4 rounded-lg bg-green-50 border border-green-100">
+                                <span class="flex items-center justify-center h-14 w-14 rounded-full bg-green-100 text-green-700 mb-3">
+                                    <i data-lucide="paw-print" class="h-7 w-7"></i>
+                                </span>
+                                <p class="font-semibold text-gray-900">Coyote Certified</p>
+                                <p class="mt-1 text-sm text-gray-600">MassWildlife coyote handling certification</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-4 rounded-lg bg-green-50 border border-green-100">
+                                <span class="flex items-center justify-center h-14 w-14 rounded-full bg-green-100 text-green-700 mb-3">
+                                    <i data-lucide="shield-check" class="h-7 w-7"></i>
+                                </span>
+                                <p class="font-semibold text-gray-900">Pest Certified</p>
+                                <p class="mt-1 text-sm text-gray-600">Massachusetts pesticide applicator</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -207,7 +291,7 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
-                                <i data-lucide="mouse-pointer-ban"></i>
+                                <i data-lucide="rat"></i>
                             </span>
                         </div>
                         <div>
@@ -233,7 +317,7 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
-                                <i data-lucide="check-shield"></i>
+                                <i data-lucide="shield-check"></i>
                             </span>
                         </div>
                         <div>
@@ -246,12 +330,25 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
-                                <i data-lucide="bug"></i>
+                                <i data-lucide="shovel"></i>
                             </span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900">Grub Control</h3>
-                            <p class="mt-1 text-gray-600">Protect your lawn from destructive grubs. Our treatments are applied at the right time of year to prevent grubs from damaging your turf and to control moles/voles that feed on them.</p>
+                            <h3 class="text-xl font-semibold text-gray-900">Mole Trapping</h3>
+                            <p class="mt-1 text-gray-600">Targeted trapping to stop moles from tearing up your lawn. We locate active tunnels and place traps where moles travel, for an effective, chemical-free solution to mound and runway damage.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <span class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
+                                <i data-lucide="squirrel"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Wildlife Trapping</h3>
+                            <p class="mt-1 text-gray-600">Humane trapping and removal for nuisance wildlife such as raccoons, skunks, squirrels, and other animals causing property damage or getting into attics, sheds, and crawl spaces.</p>
                         </div>
                     </div>
 
@@ -272,7 +369,7 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
-                                <i data-lucide="bee"></i>
+                                <i data-lucide="hexagon"></i>
                             </span>
                         </div>
                         <div>
@@ -383,56 +480,80 @@
                 <h1 class="text-3xl font-bold text-gray-900 mb-6">DIY Pest Control Tips</h1>
                 <p class="text-lg text-gray-700 mb-8">While many pest issues require a professional, here are a couple of effective DIY methods you can use to help protect your property. <strong class="font-semibold">Disclaimer:</strong> Always use caution and follow all safety instructions when handling any pest control materials.</p>
 
-                <!-- DIY Item 1 -->
-                <div class="mb-12">
-                    <h2 class="text-2xl font-semibold text-green-700 mb-4">How to Make Homemade Tick Tubes</h2>
-                    <div class="space-y-4 text-gray-700 leading-relaxed">
-                        <p><strong class="font-semibold">What they do:</strong> Tick tubes are a targeted, low-impact way to reduce the tick population in your yard. They don't spray pesticides; instead, they use mice as the delivery system. Mice build their nests with cotton, and when we provide cotton treated with a very mild insecticide (Permethrin), it kills the ticks on them without harming the mice. Since mice are the primary hosts for Lyme-carrying ticks, this breaks the tick life cycle.</p>
-                        <p><strong class="font-semibold">Materials Needed:</strong></p>
-                        <ul class="list-disc list-inside space-y-1">
-                            <li>Cardboard tubes (from paper towels or toilet paper), or 4-inch sections of PVC pipe.</li>
-                            <li>Cotton balls or dryer lint.</li>
-                            <li>Permethrin concentrate (available at garden or farm supply stores).</li>
-                            <li>Gloves and eye protection.</li>
-                            <li>A small bucket or container for mixing.</li>
-                        </ul>
-                        <p><strong class="font-semibold">Instructions:</strong></p>
-                        <ol class="list-decimal list-inside space-y-2">
-                            <li>Put on your gloves and eye protection.</li>
-                            <li>In your bucket, mix the Permethrin solution according to the label's instructions for treating clothing.</li>
-                            <li>Add your cotton balls or dryer lint to the solution and let them get saturated.</li>
-                            <li>Squeeze out the excess liquid so the cotton is damp, not soaking wet.</li>
-                            <li>Let the cotton dry completely.</li>
-                            <li>Stuff the dry, treated cotton loosely into your cardboard or PVC tubes.</li>
-                            <li>Place the tubes in your yard in areas where mice travel: under bushes, along stone walls, in woodpiles, and under decks.</li>
-                            <li>Distribute them every 10-15 feet in high-activity areas.</li>
-                            <li>Replace the cotton twice a year: once in late spring and again in late summer.</li>
-                        </ol>
+                <div class="space-y-4">
+                    <!-- DIY Card 1: Tick Tubes -->
+                    <div class="diy-card border border-gray-200 rounded-xl overflow-hidden hover:border-green-300 transition-colors">
+                        <button type="button" class="diy-toggle w-full flex items-start gap-4 text-left p-5 sm:p-6 bg-white hover:bg-green-50/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-inset">
+                            <span class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
+                                <i data-lucide="flask-conical" class="h-6 w-6"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-xl font-semibold text-gray-900">Homemade Tick Tubes</span>
+                                <span class="block mt-1 text-sm text-gray-600">A low-impact yard method that uses treated cotton to reduce ticks on mice — without spraying your whole property.</span>
+                            </span>
+                            <i data-lucide="chevron-down" class="diy-arrow flex-shrink-0 h-6 w-6 text-gray-400 mt-1"></i>
+                        </button>
+                        <div class="diy-body">
+                            <div class="px-5 sm:px-6 pb-6 pt-0 space-y-4 text-gray-700 leading-relaxed border-t border-gray-100 mx-5 sm:mx-6">
+                                <p class="pt-5"><strong class="font-semibold">What they do:</strong> Tick tubes are a targeted, low-impact way to reduce the tick population in your yard. They don't spray pesticides; instead, they use mice as the delivery system. Mice build their nests with cotton, and when we provide cotton treated with a very mild insecticide (Permethrin), it kills the ticks on them without harming the mice. Since mice are the primary hosts for Lyme-carrying ticks, this breaks the tick life cycle.</p>
+                                <p><strong class="font-semibold">Materials Needed:</strong></p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Cardboard tubes (from paper towels or toilet paper), or 4-inch sections of PVC pipe.</li>
+                                    <li>Cotton balls or dryer lint.</li>
+                                    <li>Permethrin concentrate (available at garden or farm supply stores).</li>
+                                    <li>Gloves and eye protection.</li>
+                                    <li>A small bucket or container for mixing.</li>
+                                </ul>
+                                <p><strong class="font-semibold">Instructions:</strong></p>
+                                <ol class="list-decimal list-inside space-y-2">
+                                    <li>Put on your gloves and eye protection.</li>
+                                    <li>In your bucket, mix the Permethrin solution according to the label's instructions for treating clothing.</li>
+                                    <li>Add your cotton balls or dryer lint to the solution and let them get saturated.</li>
+                                    <li>Squeeze out the excess liquid so the cotton is damp, not soaking wet.</li>
+                                    <li>Let the cotton dry completely.</li>
+                                    <li>Stuff the dry, treated cotton loosely into your cardboard or PVC tubes.</li>
+                                    <li>Place the tubes in your yard in areas where mice travel: under bushes, along stone walls, in woodpiles, and under decks.</li>
+                                    <li>Distribute them every 10-15 feet in high-activity areas.</li>
+                                    <li>Replace the cotton twice a year: once in late spring and again in late summer.</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- DIY Item 2 -->
-                <div>
-                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Borax Ant Treatments</h2>
-                    <div class="space-y-4 text-gray-700 leading-relaxed">
-                        <p><strong class="font-semibold">What it does:</strong> This is a simple and effective homemade bait for sugar ants. Ants will take the bait back to the colony, feeding it to the queen and other ants, which helps eliminate the entire nest.</p>
-                        <p><strong class="font-semibold">Materials Needed:</strong></p>
-                        <ul class="list-disc list-inside space-y-1">
-                            <li>Borax (household cleaner, found in the laundry aisle).</li>
-                            <li>Sugar (granulated).</li>
-                            <li>Warm water.</li>
-                            <li>Small containers with lids (like old yogurt cups) or bottle caps.</li>
-                            <li>Cotton balls (optional).</li>
-                        </ul>
-                        <p><strong class="font-semibold">Instructions:</strong></p>
-                        <ol class="list-decimal list-inside space-y-2">
-                            <li>Mix a solution of <strong>1 part Borax to 3 parts sugar</strong>. (e.g., 1 tablespoon of Borax and 3 tablespoons of sugar).</li>
-                            <li>Add just enough warm water to dissolve the sugar and Borax, creating a thick, sugary syrup.</li>
-                            <li>Punch small holes in the sides of your plastic container lids, large enough for ants to crawl through.</li>
-                            <li>Dip cotton balls in the solution and place them inside the container, then put the lid on. Alternatively, you can just pour a small amount of the liquid bait into a bottle cap.</li>
-                            <li>Place your bait stations in areas where you see ant trails. <strong class="font-semibold">CRITICAL: Keep these baits far out of reach of children and pets.</strong> Borax is toxic if ingested.</li>
-                            <li>Check the baits every few days and refill as needed. Be patient; it can take a week or more to see a significant reduction as the bait works its way through the colony.</li>
-                        </ol>
+                    <!-- DIY Card 2: Borax Ant Treatments -->
+                    <div class="diy-card border border-gray-200 rounded-xl overflow-hidden hover:border-green-300 transition-colors">
+                        <button type="button" class="diy-toggle w-full flex items-start gap-4 text-left p-5 sm:p-6 bg-white hover:bg-green-50/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-inset">
+                            <span class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
+                                <i data-lucide="bug" class="h-6 w-6"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-xl font-semibold text-gray-900">Borax Ant Treatments</span>
+                                <span class="block mt-1 text-sm text-gray-600">A simple homemade sugar bait that ants carry back to the colony to help eliminate the nest.</span>
+                            </span>
+                            <i data-lucide="chevron-down" class="diy-arrow flex-shrink-0 h-6 w-6 text-gray-400 mt-1"></i>
+                        </button>
+                        <div class="diy-body">
+                            <div class="px-5 sm:px-6 pb-6 pt-0 space-y-4 text-gray-700 leading-relaxed border-t border-gray-100 mx-5 sm:mx-6">
+                                <p class="pt-5"><strong class="font-semibold">What it does:</strong> This is a simple and effective homemade bait for sugar ants. Ants will take the bait back to the colony, feeding it to the queen and other ants, which helps eliminate the entire nest.</p>
+                                <p><strong class="font-semibold">Materials Needed:</strong></p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Borax (household cleaner, found in the laundry aisle).</li>
+                                    <li>Sugar (granulated).</li>
+                                    <li>Warm water.</li>
+                                    <li>Small containers with lids (like old yogurt cups) or bottle caps.</li>
+                                    <li>Cotton balls (optional).</li>
+                                </ul>
+                                <p><strong class="font-semibold">Instructions:</strong></p>
+                                <ol class="list-decimal list-inside space-y-2">
+                                    <li>Mix a solution of <strong>1 part Borax to 3 parts sugar</strong>. (e.g., 1 tablespoon of Borax and 3 tablespoons of sugar).</li>
+                                    <li>Add just enough warm water to dissolve the sugar and Borax, creating a thick, sugary syrup.</li>
+                                    <li>Punch small holes in the sides of your plastic container lids, large enough for ants to crawl through.</li>
+                                    <li>Dip cotton balls in the solution and place them inside the container, then put the lid on. Alternatively, you can just pour a small amount of the liquid bait into a bottle cap.</li>
+                                    <li>Place your bait stations in areas where you see ant trails. <strong class="font-semibold">CRITICAL: Keep these baits far out of reach of children and pets.</strong> Borax is toxic if ingested.</li>
+                                    <li>Check the baits every few days and refill as needed. Be patient; it can take a week or more to see a significant reduction as the bait works its way through the colony.</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -524,6 +645,74 @@
                         </div>
                     </div>
 
+                    <!-- FAQ Category -->
+                    <h2 class="text-2xl font-semibold text-green-700 mt-10 mb-4 border-b pb-2">Coyote Questions (Massachusetts)</h2>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full flex justify-between items-center text-left py-4">
+                            <span class="text-lg font-medium text-gray-900">I saw a coyote near my house. Is that a problem?</span>
+                            <i data-lucide="chevron-down" class="faq-arrow h-6 w-6 text-gray-500"></i>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700 leading-relaxed">
+                            <p>Not by itself. Coyotes live throughout Massachusetts, including suburban neighborhoods. Seeing one pass through your yard or hearing them at night is usually normal wildlife activity. Concern rises when a coyote becomes <strong class="font-semibold">habituated</strong>—comfortable around people, lingering on the property, approaching pets, or showing bold or aggressive behavior. MassWildlife's long-term fix is conflict prevention (remove attractants and haze), not simply removing every coyote that appears.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full flex justify-between items-center text-left py-4">
+                            <span class="text-lg font-medium text-gray-900">What should I do first if I have a coyote issue?</span>
+                            <i data-lucide="chevron-down" class="faq-arrow h-6 w-6 text-gray-500"></i>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700 leading-relaxed">
+                            <p>Start with the steps MassWildlife recommends for every homeowner:</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong class="font-semibold">Remove food sources</strong> — secure trash and compost, bring pet food indoors, clean up fallen fruit, and take down bird feeders that attract prey.</li>
+                                <li><strong class="font-semibold">Protect pets</strong> — keep dogs on a leash, supervise outdoor time (especially dusk to dawn), and never leave small pets unattended. Mating and denning season (January–May) can increase coyote aggression toward dogs.</li>
+                                <li><strong class="font-semibold">Haze coyotes</strong> — if a coyote is comfortable on your property, make yourself big and loud (yell, clap, wave arms, throw objects near—not at—the animal) and do not stop until it leaves the area. Never run, and never haze a sick or cornered animal.</li>
+                                <li><strong class="font-semibold">Close off shelter</strong> — seal crawl spaces under decks, porches, and sheds.</li>
+                            </ol>
+                            <p class="mt-2">If an immediate threat to human safety exists, call your local police or the Massachusetts Environmental Police at 1-800-632-8075.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full flex justify-between items-center text-left py-4">
+                            <span class="text-lg font-medium text-gray-900">Who is allowed to handle coyotes in Massachusetts?</span>
+                            <i data-lucide="chevron-down" class="faq-arrow h-6 w-6 text-gray-500"></i>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700 leading-relaxed">
+                            <p>Coyotes are regulated by MassWildlife. A licensed Problem Animal Control (PAC) agent may be hired to help when wildlife is damaging property or threatening people or pets. Under <strong class="font-semibold">321 CMR 2.14</strong>:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Any licensed PAC agent may be hired to <strong class="font-semibold">harass</strong> coyotes on a homeowner's behalf.</li>
+                                <li>Only PAC agents who have completed MassWildlife's additional <strong class="font-semibold">coyote training and certification</strong> may <strong class="font-semibold">take or attempt to take</strong> (remove) a problem coyote.</li>
+                            </ul>
+                            <p class="mt-2">Wildland Pest Control is a Massachusetts PAC agent and is <strong class="font-semibold">coyote certified</strong>, so we can legally advise, haze, and—when warranted—pursue removal under state rules.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full flex justify-between items-center text-left py-4">
+                            <span class="text-lg font-medium text-gray-900">What steps does a coyote-certified PAC agent follow?</span>
+                            <i data-lucide="chevron-down" class="faq-arrow h-6 w-6 text-gray-500"></i>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700 leading-relaxed">
+                            <p>When you hire us for a coyote complaint, we follow MassWildlife's framework—not a one-size-fits-all “trap and remove” approach:</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong class="font-semibold">Assess the situation</strong> — confirm whether the issue is normal presence, habituation, pet conflict, property damage, or a true safety concern.</li>
+                                <li><strong class="font-semibold">Correct attractants and coach hazing</strong> — remove food and shelter cues and implement aggressive hazing so coyotes stay wary of people.</li>
+                                <li><strong class="font-semibold">Apply non-lethal control first when appropriate</strong> — harassment and exclusion are the preferred first tools; any PAC agent may haze, and certified agents are trained in both non-lethal and lethal options.</li>
+                                <li><strong class="font-semibold">Escalate only when justified</strong> — taking a coyote is reserved for problem situations (threat to people or domestic animals, or serious property conflict). Only a coyote-certified PAC agent may take or attempt to take a coyote.</li>
+                                <li><strong class="font-semibold">Meet MassWildlife reporting rules</strong> — if a take or attempted take occurs, the certified agent must file a written report with MassWildlife within <strong class="font-semibold">48 hours</strong> (location, date, nature of the problem, circumstances, number and sex of animals, and outcome). Any coyote taken must be surrendered to MassWildlife within that same 48-hour window. Coyote activity is also included on the required annual PAC coyote report.</li>
+                            </ol>
+                            <p class="mt-2">Removing one coyote is often only a short-term fix if food and shelter remain; lasting results come from prevention plus professional follow-through.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full flex justify-between items-center text-left py-4">
+                            <span class="text-lg font-medium text-gray-900">Can I trap or shoot a coyote myself?</span>
+                            <i data-lucide="chevron-down" class="faq-arrow h-6 w-6 text-gray-500"></i>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700 leading-relaxed">
+                            <p>Do not hire an unlicensed person, and do not attempt PAC-style control yourself. Problem coyote work in Massachusetts is limited to properly licensed PAC agents, and <strong class="font-semibold">removal</strong> requires MassWildlife coyote certification plus the reporting duties above. Firearms use by agents also requires the appropriate hunting and gun licenses. If you believe a coyote is an immediate danger to people, contact local police or the Environmental Police rather than intervening on your own.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -539,13 +728,22 @@
                     <!-- Calculator -->
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                         <h2 class="text-2xl font-semibold text-green-700 mb-4">Theoretical LD50 Calculator</h2>
-                        <p class="mb-4">This tool estimates the number of bait blocks an animal would need to consume to reach the LD50 (Lethal Dose, 50%) based on the product's active ingredient (AI) and the animal's body weight. The LD50 is the dose required to kill half the members of a tested population.</p>
+                        <p class="mb-4">This tool estimates how many Contrac with Lumitrack bait blocks an animal would need to consume to reach a published LD50 (Lethal Dose, 50%) for bromadiolone, based on body weight. The LD50 is the dose estimated to be lethal to half of a tested population.</p>
                         
-                        <p class="mb-4 text-sm text-gray-600"><strong>Note:</strong> This calculator is hard-coded for a specific product example: a <strong>1 oz (28.35g) bait block</strong> containing <strong>0.005% active ingredient (approx 1.42mg)</strong>. The LD50 ratio is assumed at 1.47mg/kg.</p>
+                        <p class="mb-4 text-sm text-gray-600"><strong>Product basis:</strong> Contrac with Lumitrack — <strong>1 oz (28.35g) BLOX</strong> with <strong>0.005% bromadiolone</strong> (~1.42 mg AI per block). Species LD50 values are published acute oral figures for the active ingredient (not the formulated bait LD50 from the SDS).</p>
                         
                         <div class="space-y-4">
                             <div>
-                                <label for="animal-weight" class="block text-sm font-medium text-gray-700">1. Animal's Weight (in lbs)</label>
+                                <label for="animal-type" class="block text-sm font-medium text-gray-700">1. Animal type</label>
+                                <select id="animal-type" class="mt-1 block w-full md:w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                                    <option value="dog">Dog (LD50 8.1 mg/kg)</option>
+                                    <option value="cat">Cat (LD50 ~25 mg/kg)</option>
+                                    <option value="rabbit">Rabbit (LD50 ~1.0 mg/kg)</option>
+                                    <option value="other">Other animal</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="animal-weight" class="block text-sm font-medium text-gray-700">2. Animal's weight (lbs)</label>
                                 <input type="text" id="animal-weight" inputmode="decimal" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\./g, '$1')" class="mt-1 block w-full md:w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" placeholder="e.g., 20">
                             </div>
                             
@@ -555,11 +753,11 @@
                         </div>
                         
                         <div id="ld50-result" class="hidden mt-6 bg-green-50 border border-green-200 p-4 rounded-lg">
-                            <p class="text-green-800"></p>
+                            <div class="text-green-800 space-y-2"></div>
                         </div>
 
                         <p class="mt-6 text-xs text-gray-500 italic">
-                            <strong>Disclaimer:</strong> This calculator is for informational and demonstrative purposes ONLY. It is a theoretical estimate based on fixed values. It is NOT a substitute for professional veterinary advice. If you suspect your pet has ingested any poison, contact your veterinarian or the ASPCA Animal Poison Control Center (888-426-4435) immediately.
+                            <strong>Disclaimer:</strong> This calculator is for informational and demonstrative purposes ONLY. It is a theoretical estimate based on product label AI content and published species LD50 values. Individual sensitivity varies, and veterinary sources often treat a fraction of the LD50 as concerning. It is NOT a substitute for professional veterinary advice. If you suspect your pet has ingested any poison, contact your veterinarian or the ASPCA Animal Poison Control Center (888-426-4435) immediately.
                         </p>
                     </div>
 
@@ -606,22 +804,34 @@
                                     <a href="tel:508-503-9886" class="text-lg text-white font-bold hover:underline">(508) 503-9886</a>
                                 </div>
                             </div>
-                            
-                            <!-- Email -->
-                            <div class="flex items-start space-x-4">
-                                <i data-lucide="mail" class="h-6 w-6 text-green-200 mt-1"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold">Email</h3>
-                                    <p class="text-green-100">Send us a message anytime.</p>
-                                    <a href="mailto:Paulr@wildlandpest.com" class="text-lg text-white font-bold hover:underline">Paulr@wildlandpest.com</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
-                    <!-- Image -->
-                    <div class="hidden md:block">
-                        <img src="/photos/mouse.webp" alt="Contact" class="h-full w-full object-cover">
+                    <!-- Contact Form -->
+                    <div class="p-6 sm:p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Send a Message</h2>
+                        <p class="text-gray-600 mb-6">Fill out the form below and your email app will open with the message ready to send.</p>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="contact-name" name="name" required autocomplete="name" class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="contact-email" name="email" required autocomplete="email" class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="you@example.com">
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone <span class="text-gray-400 font-normal">(optional)</span></label>
+                                <input type="tel" id="contact-phone" name="phone" autocomplete="tel" class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="(508) 555-0123">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="contact-message" name="message" required rows="4" class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="Tell us about your pest problem..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-700 text-white font-semibold py-3 px-4 rounded-lg hover:bg-green-800 transition duration-200">
+                                Open Email to Send
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -647,7 +857,7 @@
                 },
                 'services': {
                     'title': 'Pest Control Services & Locations | Wildland Pest Control',
-                    'description': 'Eco-friendly rodent contraceptive, tick/grub control, and insect spraying. Serving Plymouth, Kingston, Carver, Wareham, Plympton, and Sagamore.'
+                    'description': 'Eco-friendly rodent contraceptive, tick control, mole trapping, wildlife trapping, and insect spraying. Serving Plymouth, Kingston, Carver, Wareham, Plympton, and Sagamore.'
                 },
                 'diy': {
                     'title': 'DIY Pest Control Tips | Wildland Pest Control',
@@ -655,7 +865,7 @@
                 },
                 'faq': {
                     'title': 'Pest Control FAQ | Wildland Pest Control',
-                    'description': 'Pest questions? Our FAQ answers common questions about mice, rats, ticks in Massachusetts, and the difference between moles and voles. Get answers now.'
+                    'description': 'Pest questions? FAQ answers on mice, rats, ticks, moles vs voles, and Massachusetts coyote rules for coyote-certified PAC agents. Get answers now.'
                 },
                 'safety': {
                     'title': 'Safety Info & Labels | Wildland Pest Control',
@@ -691,8 +901,14 @@
                 if (pageName === 'faq') {
                     initFaqToggles();
                 }
+                if (pageName === 'diy' || pageName === 'home') {
+                    initDiyToggles();
+                }
                 if (pageName === 'safety') {
                     initLd50Calculator();
+                }
+                if (pageName === 'contact') {
+                    initContactForm();
                 }
 
                 // Scroll to top
@@ -793,36 +1009,88 @@
                 });
             }
 
+            // --- DIY Expandable Card Logic ---
+            function initDiyToggles() {
+                const diyCards = mainContent.querySelectorAll('.diy-card');
+                diyCards.forEach(card => {
+                    const toggle = card.querySelector('.diy-toggle');
+                    toggle.addEventListener('click', () => {
+                        diyCards.forEach(otherCard => {
+                            if (otherCard !== card && otherCard.classList.contains('open')) {
+                                otherCard.classList.remove('open');
+                            }
+                        });
+                        card.classList.toggle('open');
+                    });
+                });
+            }
+
+            // --- Contact Form (mailto) ---
+            function initContactForm() {
+                const form = document.getElementById('contact-form');
+                if (!form) return;
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('contact-name').value.trim();
+                    const email = document.getElementById('contact-email').value.trim();
+                    const phone = document.getElementById('contact-phone').value.trim();
+                    const message = document.getElementById('contact-message').value.trim();
+
+                    const subject = encodeURIComponent(`Website inquiry from ${name}`);
+                    let body = `Name: ${name}\nEmail: ${email}`;
+                    if (phone) body += `\nPhone: ${phone}`;
+                    body += `\n\n${message}`;
+
+                    window.location.href = `mailto:Paulr@wildlandpest.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+                });
+            }
+
             // --- LD50 Calculator Logic ---
+            // Contrac with Lumitrack: 1 oz BLOX @ 0.005% bromadiolone
+            // Species LD50s are published acute oral values for bromadiolone AI (mg/kg)
             function initLd50Calculator() {
                 const calculateBtn = document.getElementById('calculate-ld50');
+                const typeSelect = document.getElementById('animal-type');
                 const weightInput = document.getElementById('animal-weight');
                 const resultDiv = document.getElementById('ld50-result');
-                const resultText = resultDiv.querySelector('p');
+                const resultContent = resultDiv.querySelector('div');
+                const aiPerBlock = 1.417475;
+                const speciesData = {
+                    dog: { label: 'dog', ld50: 8.1 },
+                    cat: { label: 'cat', ld50: 25 },
+                    rabbit: { label: 'rabbit', ld50: 1.0 }
+                };
 
                 calculateBtn.addEventListener('click', function() {
                     const weightLbs = parseFloat(weightInput.value);
-                    const aiPerBlock = 1.417475; 
-                    
-                    if (isNaN(weightLbs) || weightLbs <= 0) {
-                        resultText.innerHTML = '<span class="font-semibold text-red-600">Please enter a valid, positive number for weight.</span>';
+                    const speciesKey = typeSelect.value;
+
+                    if (speciesKey === 'other') {
+                        resultContent.innerHTML = '<p><span class="font-semibold text-red-600">No reliable single LD50 is built in for this animal type.</span> If ingestion is suspected, contact your veterinarian or the ASPCA Animal Poison Control Center (888-426-4435) immediately.</p>';
                         resultDiv.classList.remove('hidden');
                         return;
                     }
-                    
-                    // --- Calculation ---
-                    // 1. Convert lbs to kg
+
+                    if (isNaN(weightLbs) || weightLbs <= 0) {
+                        resultContent.innerHTML = '<p><span class="font-semibold text-red-600">Please enter a valid, positive number for weight.</span></p>';
+                        resultDiv.classList.remove('hidden');
+                        return;
+                    }
+
+                    const species = speciesData[speciesKey];
                     const weightKg = weightLbs / 2.20462;
-                    
-                    // 2. Calculate total mg needed for LD50
-                    // Using 1.47mg/kg as the LD50 ratio
-                    const totalMgLD50 = weightKg * 1.47;
-                    
-                    // 3. Calculate number of blocks
-                    const blocks = totalMgLD50 / aiPerBlock;
-                    
-                    // --- Display Result ---
-                    resultText.innerHTML = `An animal weighing <strong class="font-semibold">${weightLbs} lbs</strong> would theoretically need to consume <strong class="font-semibold">${blocks.toFixed(2)} blocks</strong> to reach the LD50.`;
+                    const totalMgLD50 = weightKg * species.ld50;
+                    const blocksLD50 = totalMgLD50 / aiPerBlock;
+                    // Common veterinary screening threshold: ~1/10 of LD50
+                    const blocksConcern = blocksLD50 / 10;
+
+                    resultContent.innerHTML = `
+                        <p>A <strong class="font-semibold">${weightLbs} lb ${species.label}</strong> would theoretically need about <strong class="font-semibold">${blocksLD50.toFixed(1)} blocks</strong> to reach the published acute oral LD50 for bromadiolone (${species.ld50} mg/kg).</p>
+                        <p class="text-sm">A commonly used veterinary concern level (~1/10 of LD50) is about <strong class="font-semibold">${blocksConcern.toFixed(1)} blocks</strong> for this weight.</p>
+                        <p class="text-sm text-gray-600">Based on Contrac with Lumitrack (0.005% bromadiolone, ~1.42 mg AI per 1 oz block).</p>
+                    `;
                     resultDiv.classList.remove('hidden');
                 });
             }
