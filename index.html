@@ -66,6 +66,7 @@
 
     <style>
         body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        section[id] { scroll-margin-top: 80px; }
         .grid-bg {
             background-image:
               linear-gradient(rgba(134,239,172,.06) 1px, transparent 1px),
@@ -87,27 +88,27 @@
 <!-- Header -->
 <header class="sticky top-0 z-40 bg-ink-950/85 backdrop-blur border-b border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="top" class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3">
             <img src="/brand/logo.svg" alt="" class="h-9 w-9" width="36" height="36">
             <span class="font-bold text-white tracking-tight">Wildland <span class="text-moss-400">Pest Systems</span></span>
         </a>
         <nav class="hidden md:flex items-center gap-7 text-sm text-gray-400">
-            <a href="baio" class="hover:text-white">BAIO</a>
-            <a href="mobile" class="hover:text-white">Mobile</a>
-            <a href="standalone" class="hover:text-white">Standalone apps</a>
-            <a href="scanner" class="hover:text-white">Coming soon</a>
-            <a href="faq" class="hover:text-white">FAQ</a>
-            <a href="download" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-4 py-2 rounded-md">Download</a>
+            <a href="/baio" class="hover:text-white">BAIO</a>
+            <a href="/mobile" class="hover:text-white">Mobile</a>
+            <a href="/standalone" class="hover:text-white">Standalone apps</a>
+            <a href="/scanner" class="hover:text-white">Coming soon</a>
+            <a href="/faq" class="hover:text-white">FAQ</a>
+            <a href="/download" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-4 py-2 rounded-md">Download</a>
         </nav>
         <button id="menu-btn" class="md:hidden p-2 text-gray-300" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
     </div>
     <nav id="mobile-menu" class="hidden md:hidden border-t border-white/5 px-4 pb-4 pt-2 space-y-1 text-gray-300">
-        <a href="baio" class="block py-2">BAIO</a>
-        <a href="mobile" class="block py-2">Mobile</a>
-        <a href="standalone" class="block py-2">Standalone apps</a>
-        <a href="scanner" class="block py-2">Coming soon</a>
-        <a href="faq" class="block py-2">FAQ</a>
-        <a href="download" class="block py-2 text-moss-400 font-semibold">Download</a>
+        <a href="/baio" class="block py-2">BAIO</a>
+        <a href="/mobile" class="block py-2">Mobile</a>
+        <a href="/standalone" class="block py-2">Standalone apps</a>
+        <a href="/scanner" class="block py-2">Coming soon</a>
+        <a href="/faq" class="block py-2">FAQ</a>
+        <a href="/download" class="block py-2 text-moss-400 font-semibold">Download</a>
     </nav>
 </header>
 
@@ -125,8 +126,8 @@
                 Wildland Pest Systems builds business software shaped by real pest control work. Customers, routes, billing, crews, payroll and truck stock live in one desktop program that runs on your own PC, with no server and no internet required.
             </p>
             <div class="mt-9 flex flex-wrap gap-3">
-                <a href="baio" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-6 py-3 rounded-md inline-flex items-center gap-2">Meet BAIO <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                <a href="download" class="border border-white/15 hover:border-moss-400 text-white font-semibold px-6 py-3 rounded-md">Get a download</a>
+                <a href="/baio" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-6 py-3 rounded-md inline-flex items-center gap-2">Meet BAIO <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="/download" class="border border-white/15 hover:border-moss-400 text-white font-semibold px-6 py-3 rounded-md">Get a download</a>
             </div>
             <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-400">
                 <span class="inline-flex items-center gap-2"><i data-lucide="wifi-off" class="w-4 h-4 text-moss-400"></i>Offline-first</span>
@@ -288,7 +289,7 @@
             <p class="font-mono text-xs uppercase tracking-[.2em] text-amber-400 mb-3">Coming soon</p>
             <h2 class="text-3xl sm:text-4xl font-bold text-white">Barcode scanner &amp; app</h2>
             <p class="mt-5 text-lg text-gray-400">A barcode scanner and companion app are on the way, built to tie into BAIO. Scan instead of typing in the field and at the shop, and let the record land in the right place automatically.</p>
-            <a href="contact" class="mt-8 inline-flex items-center gap-2 border border-white/15 hover:border-moss-400 text-white font-semibold px-6 py-3 rounded-md">Get notified at launch <i data-lucide="bell" class="w-4 h-4"></i></a>
+            <a href="/contact" class="mt-8 inline-flex items-center gap-2 border border-white/15 hover:border-moss-400 text-white font-semibold px-6 py-3 rounded-md">Get notified at launch <i data-lucide="bell" class="w-4 h-4"></i></a>
         </div>
     </div>
 </section>
@@ -412,10 +413,10 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row gap-4 justify-between">
         <p>© <span id="year"></span> Wildland Pest Systems</p>
         <div class="flex gap-6">
-            <a href="baio" class="hover:text-white">BAIO</a>
-            <a href="standalone" class="hover:text-white">Apps</a>
-            <a href="download" class="hover:text-white">Download</a>
-            <a href="contact" class="hover:text-white">Contact</a>
+            <a href="/baio" class="hover:text-white">BAIO</a>
+            <a href="/standalone" class="hover:text-white">Apps</a>
+            <a href="/download" class="hover:text-white">Download</a>
+            <a href="/contact" class="hover:text-white">Contact</a>
         </div>
     </div>
 </footer>
@@ -451,6 +452,57 @@
         const body = `Name: ${name}\nCompany: ${company}\nInterested in: ${interest}\n\n${message}`;
         window.location.href = `mailto:Paulr@wildlandpest.com?subject=${subject}&body=${encodeURIComponent(body)}`;
     });
+</script>
+
+<script>
+  (function () {
+    var sections = ['baio', 'mobile', 'standalone', 'scanner', 'download', 'faq', 'contact'];
+    function sectionFromPath(path) {
+      var name = path.replace(/^\/+|\/+$/g, '');
+      if (name === '') return 'top';
+      if (sections.indexOf(name) !== -1) return name;
+      return null;
+    }
+    function scrollToSection(name, behavior) {
+      if (name === 'top') { window.scrollTo({ top: 0, behavior: behavior }); return; }
+      var el = document.getElementById(name);
+      if (!el) return;
+      var top = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top: top, behavior: behavior });
+    }
+    function goToPath(path, behavior) {
+      var name = sectionFromPath(path);
+      if (name === null) return false;
+      scrollToSection(name, behavior);
+      return true;
+    }
+    document.querySelectorAll('a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      var isSection = (href === '/') || (sections.indexOf(href.replace(/^\//, '')) !== -1);
+      if (isSection) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          history.pushState(null, '', href);
+          goToPath(href, 'smooth');
+        });
+      }
+    });
+    window.addEventListener('popstate', function () {
+      goToPath(window.location.pathname, 'smooth');
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem('wildlandpest-section'); sessionStorage.removeItem('wildlandpest-section'); } catch (err) {}
+    if (saved && sections.indexOf(saved) !== -1) {
+      history.replaceState(null, '', '/' + saved);
+      setTimeout(function () { scrollToSection(saved, 'auto'); }, 50);
+    } else {
+      var initial = sectionFromPath(window.location.pathname);
+      if (initial && initial !== 'top') {
+        setTimeout(function () { scrollToSection(initial, 'auto'); }, 50);
+      }
+    }
+  })();
 </script>
 </body>
 </html>
