@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found - Wildland Pest Systems</title>
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    var sections = ['baio', 'mobile', 'standalone', 'scanner', 'download', 'faq', 'contact'];
+    if (sections.indexOf(path) !== -1) {
+      try { sessionStorage.setItem('wildlandpest-section', path); } catch (err) {}
+      window.location.replace('/');
+    }
+  })();
+</script>
+<style>
+  body { background: #0b1210; color: #e5e7eb; font-family: sans-serif; max-width: 40rem; margin: 4rem auto; padding: 0 1.5rem; }
+  a { color: #4ade80; }
+</style>
+</head>
+<body>
+<h1>Page not found</h1>
+<p>That page does not exist. <a href="/">Go to the Wildland Pest Systems home page</a>.</p>
+</body>
+</html>
