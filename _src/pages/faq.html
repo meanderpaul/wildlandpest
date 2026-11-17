@@ -1,0 +1,37 @@
+<!--
+title: FAQ | Wildland Pest Systems
+description: Answers about servers, internet, free trials, BAIO vs standalone apps and which industries Wildland software fits.
+path: /faq/
+-->
+<section class="py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">Questions</h1>
+        <div class="mt-10 divide-y divide-white/5 border-y border-white/5">
+            <div class="faq-item">
+                <button class="faq-q w-full flex items-center justify-between py-5 text-left font-semibold text-white" aria-expanded="false">Do I need a server or internet connection?<i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-gray-500"></i></button>
+                <div class="faq-answer"><p class="pb-5 text-gray-400 text-sm">No. The desktop apps run on a Windows PC with a local database. Phone Access for inventory works over your own office network. Syncing to BAIO Mobile uses the internet only for that feature.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q w-full flex items-center justify-between py-5 text-left font-semibold text-white" aria-expanded="false">Should I buy BAIO or a standalone app?<i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-gray-500"></i></button>
+                <div class="faq-answer"><p class="pb-5 text-gray-400 text-sm">If you need customers, crews and inventory working together, BAIO is the one program that does it all. If you only need one piece today, start with the standalone app. BAIO can import its data later.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q w-full flex items-center justify-between py-5 text-left font-semibold text-white" aria-expanded="false">Is there a free trial?<i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-gray-500"></i></button>
+                <div class="faq-answer"><p class="pb-5 text-gray-400 text-sm">Yes. Demo editions are full-featured with a cap, such as 50 customers in the CRM or 4 employees in Workforce Hub. Your data is never locked or deleted, and upgrading keeps everything you entered.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q w-full flex items-center justify-between py-5 text-left font-semibold text-white" aria-expanded="false">Is it only for pest control?<i data-lucide="chevron-down" class="faq-arrow w-5 h-5 text-gray-500"></i></button>
+                <div class="faq-answer"><p class="pb-5 text-gray-400 text-sm">Pest control is the home turf, but BAIO's industry packs also cover plumbing and general service businesses.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- @scripts -->
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const open = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+    }));
+</script>

@@ -1,0 +1,51 @@
+<!--
+title: Contact | Wildland Pest Systems
+description: Ask for a walkthrough, a quote for your team, or a heads-up when BAIO Mobile and the barcode scanner launch.
+path: /contact/
+-->
+<section class="py-24 bg-ink-900 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-14">
+        <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">Talk to us</h1>
+            <p class="mt-4 text-gray-400">Want a walkthrough, a quote for your team, or a heads-up when the barcode scanner and BAIO Mobile launch? Send a note.</p>
+            <div class="mt-8 space-y-4 text-sm">
+                <a href="tel:+15085039886" class="flex items-center gap-3 text-white hover:text-moss-400"><i data-lucide="phone" class="w-5 h-5 text-moss-400"></i>(508) 503-9886</a>
+                <a href="mailto:Paulr@wildlandpest.com" class="flex items-center gap-3 text-white hover:text-moss-400"><i data-lucide="mail" class="w-5 h-5 text-moss-400"></i>Paulr@wildlandpest.com</a>
+            </div>
+        </div>
+        <form id="contact-form" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <label class="block text-sm"><span class="text-gray-400">Name</span><input id="name" required class="mt-1 w-full rounded-md bg-ink-950 border border-white/10 px-3 py-2.5 text-white focus:border-moss-400 focus:outline-none"></label>
+                <label class="block text-sm"><span class="text-gray-400">Company</span><input id="company" class="mt-1 w-full rounded-md bg-ink-950 border border-white/10 px-3 py-2.5 text-white focus:border-moss-400 focus:outline-none"></label>
+            </div>
+            <label class="block text-sm"><span class="text-gray-400">Interested in</span>
+                <select id="interest" class="mt-1 w-full rounded-md bg-ink-950 border border-white/10 px-3 py-2.5 text-white focus:border-moss-400 focus:outline-none">
+                    <option>BAIO — Business All-in-One</option>
+                    <option>BAIO Mobile</option>
+                    <option>Pest Control CRM</option>
+                    <option>Inventory Manager</option>
+                    <option>Workforce Hub</option>
+                    <option>Barcode scanner &amp; app</option>
+                    <option>Something else</option>
+                </select>
+            </label>
+            <label class="block text-sm"><span class="text-gray-400">Message</span><textarea id="message" rows="5" required class="mt-1 w-full rounded-md bg-ink-950 border border-white/10 px-3 py-2.5 text-white focus:border-moss-400 focus:outline-none"></textarea></label>
+            <button type="submit" class="w-full bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold py-3 rounded-md">Send message</button>
+            <p class="text-xs text-gray-500">Opens your email app with the message filled in.</p>
+        </form>
+    </div>
+</section>
+
+<!-- @scripts -->
+<script>
+    document.getElementById('contact-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const company = document.getElementById('company').value.trim();
+        const interest = document.getElementById('interest').value;
+        const message = document.getElementById('message').value.trim();
+        const subject = encodeURIComponent(`Wildland Pest Systems: ${interest}`);
+        const body = `Name: ${name}\nCompany: ${company}\nInterested in: ${interest}\n\n${message}`;
+        window.location.href = `mailto:Paulr@wildlandpest.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    });
+</script>

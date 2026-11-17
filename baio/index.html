@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZHJW9SB01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BZHJW9SB01');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIO — Business All-in-One | Wildland Pest Systems</title>
+    <meta name="description" content="BAIO combines a pest control CRM, sales pipeline, billing, commissions, payroll and inventory into one offline-first Windows program.">
+    <link rel="canonical" href="https://www.wildlandpest.com/baio/">
+    <meta property="og:title" content="BAIO — Business All-in-One | Wildland Pest Systems">
+    <meta property="og:description" content="BAIO combines a pest control CRM, sales pipeline, billing, commissions, payroll and inventory into one offline-first Windows program.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wildlandpest.com/baio/">
+    <meta property="og:image" content="https://www.wildlandpest.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#0b1210">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace'] },
+            colors: {
+              ink: { 950: '#0b1210', 900: '#111a17', 800: '#18241f', 700: '#22322b' },
+              moss: { 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d' },
+              amber: { 400: '#fbbf24' }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.363.0/dist/umd/lucide.min.js"></script>
+
+    <style>
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .grid-bg {
+            background-image:
+              linear-gradient(rgba(134,239,172,.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(134,239,172,.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow { box-shadow: 0 0 0 1px rgba(74,222,128,.25), 0 20px 60px -20px rgba(34,197,94,.35); }
+        .hex { clip-path: polygon(25% 4%, 75% 4%, 100% 50%, 75% 96%, 25% 96%, 0% 50%); }
+        .glow-amber { box-shadow: 0 0 0 1px rgba(251,191,36,.2), 0 20px 60px -20px rgba(251,191,36,.3); }
+        .roadmap-dash { background: repeating-linear-gradient(90deg, #6b7280 0 10px, transparent 10px 18px); }
+        .faq-answer { transition: max-height .3s ease-out, opacity .2s; max-height: 0; opacity: 0; overflow: hidden; }
+        .faq-item.open .faq-answer { max-height: 600px; opacity: 1; }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); }
+        .faq-arrow { transition: transform .3s; }
+        .scanline { animation: scan 2.4s ease-in-out infinite; }
+        @keyframes scan { 0%,100% { transform: translateY(0); } 50% { transform: translateY(46px); } }
+        /* Screenshot frames */
+        .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; background: #18241f; }
+        .phone img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; background: #18241f; }
+        .zoomable { cursor: zoom-in; }
+        #lightbox { background: rgba(5,9,8,.92); }
+        #lightbox img { max-width: 95vw; max-height: 90vh; }
+        @media (prefers-reduced-motion: reduce) { .scanline { animation: none; } }
+    </style>
+</head>
+<body class="bg-ink-950 text-gray-200 font-sans">
+
+<header class="sticky top-0 z-40 bg-ink-950/85 backdrop-blur border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+            <img src="/brand/logo.svg" alt="" class="h-9 w-9" width="36" height="36">
+            <span class="font-bold text-white tracking-tight">Wildland <span class="text-moss-400">Pest Systems</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm text-gray-400">
+            <a href="/baio/" class="text-white" aria-current="page">BAIO</a>
+            <a href="/mobile/" class="hover:text-white">Mobile</a>
+            <a href="/standalone/" class="hover:text-white">Standalone apps</a>
+            <a href="/roadmap/" class="hover:text-white">Roadmap</a>
+            <a href="/scanner/" class="hover:text-white">Coming soon</a>
+            <a href="/faq/" class="hover:text-white">FAQ</a>
+            <a href="/download/" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-4 py-2 rounded-md">Download</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-gray-300" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-white/5 px-4 pb-4 pt-2 space-y-1 text-gray-300">
+        <a href="/baio/" class="block py-2 text-white" aria-current="page">BAIO</a>
+        <a href="/mobile/" class="block py-2">Mobile</a>
+        <a href="/standalone/" class="block py-2">Standalone apps</a>
+        <a href="/roadmap/" class="block py-2">Roadmap</a>
+        <a href="/scanner/" class="block py-2">Coming soon</a>
+        <a href="/faq/" class="block py-2">FAQ</a>
+        <a href="/download/" class="block py-2 text-moss-400 font-semibold">Download</a>
+    </nav>
+</header>
+
+<main>
+<section class="relative overflow-hidden grid-bg border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <p class="font-mono text-xs uppercase tracking-[.2em] text-moss-400 mb-3">Flagship platform</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">BAIO — Business All-in-One</h1>
+            <p class="mt-5 text-lg text-gray-400">BAIO combines our CRM, Workforce Hub, Inventory Manager and sales tools into one installable program. Records you enter once flow everywhere they're needed. A sold job feeds commissions, commissions feed payroll, and a completed visit takes the bait it used out of stock.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a href="https://apps.microsoft.com/detail/9PCR97XHX2ZM" target="_blank" rel="noopener" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-6 py-3 rounded-md inline-flex items-center gap-2">Get BAIO on the Microsoft Store <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+                <span class="text-white font-semibold">$74.99<span class="text-sm font-normal text-gray-400"> / month</span></span>
+            </div>
+        </div>
+        <div class="mt-14">
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Dashboard</span></div><img src="/screenshots/baio-dashboard.png" alt="BAIO dashboard" loading="lazy" class="zoomable"></figure>
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-24">
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
+                <i data-lucide="calendar-clock" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Customers &amp; service</h2>
+                <p class="mt-4 text-gray-400">Customer records, recurring service due dates, scheduled routes and a call log. Track station counts and bait types per account.</p>
+            </div>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Customers</span></div><img src="/screenshots/baio-customers.png" alt="BAIO customer list with service due dates" loading="lazy" class="zoomable"></figure>
+        </div>
+
+        <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
+            <div class="lg:order-2">
+                <i data-lucide="kanban-square" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Sales pipeline</h2>
+                <p class="mt-4 text-gray-400">Move leads from inquiry to appointment to won on a board. Won leads become sold jobs, and a leaderboard keeps the team honest.</p>
+            </div>
+            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Sales</span></div><img src="/screenshots/baio-sales.png" alt="BAIO sales pipeline board" loading="lazy" class="zoomable"></figure></div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
+                <i data-lucide="wallet" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Billing</h2>
+                <p class="mt-4 text-gray-400">See unpaid customers, log payment errors and read AR aging in one place instead of across spreadsheets.</p>
+            </div>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Billing</span></div><img src="/screenshots/baio-billing.png" alt="BAIO billing screen with AR aging" loading="lazy" class="zoomable"></figure>
+        </div>
+
+        <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
+            <div class="lg:order-2">
+                <i data-lucide="badge-dollar-sign" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Commissions to payroll</h2>
+                <p class="mt-4 text-gray-400">Split commissions between the seller and the tech who did the work, add manager overrides, withhold or deduct, then send the lines straight to payroll.</p>
+            </div>
+            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Commissions</span></div><img src="/screenshots/baio-commissions.png" alt="BAIO commissions screen" loading="lazy" class="zoomable"></figure></div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
+                <i data-lucide="clock" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Team &amp; time</h2>
+                <p class="mt-4 text-gray-400">One employee list with time clock, time off, PTO accrual and payroll, so office and field staff are all in the same system.</p>
+            </div>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Team</span></div><img src="/screenshots/baio-team.png" alt="BAIO team and time clock screen" loading="lazy" class="zoomable"></figure>
+        </div>
+
+        <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
+            <div class="lg:order-2">
+                <i data-lucide="truck" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Inventory &amp; trucks</h2>
+                <p class="mt-4 text-gray-400">Shop and vehicle stock, low-stock alerts, purchase orders and movement history. Services carry a bill of materials that deducts on each visit.</p>
+            </div>
+            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Inventory</span></div><img src="/screenshots/baio-inventory.png" alt="BAIO inventory screen with shop and truck stock" loading="lazy" class="zoomable"></figure></div>
+        </div>
+
+        <div class="bg-ink-900 border border-white/5 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+            <i data-lucide="layers" class="w-8 h-8 text-moss-400 shrink-0"></i>
+            <p class="text-gray-400 text-sm"><span class="text-white font-semibold">Industry packs.</span> BAIO ships with a pest control pack (bait types, stations, target species, service types) and can switch to plumbing or general service labels, so it fits the way your shop already talks.</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-ink-900 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Already using a standalone app?</h2>
+            <p class="mt-2 text-gray-400">BAIO can import data from the CRM, Inventory Manager and Workforce Hub on first open.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            <a href="/roadmap/" class="border border-white/15 hover:border-moss-400 text-white font-semibold px-6 py-3 rounded-md">See the roadmap</a>
+            <a href="/contact/" class="bg-moss-500 hover:bg-moss-400 text-ink-950 font-semibold px-6 py-3 rounded-md">Ask for a walkthrough</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="border-t border-white/5 py-10 text-sm text-gray-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row gap-4 justify-between">
+        <p>© <span id="year"></span> Wildland Pest Systems</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="/baio/" class="hover:text-white">BAIO</a>
+            <a href="/mobile/" class="hover:text-white">Mobile</a>
+            <a href="/standalone/" class="hover:text-white">Apps</a>
+            <a href="/roadmap/" class="hover:text-white">Roadmap</a>
+            <a href="/faq/" class="hover:text-white">FAQ</a>
+            <a href="/download/" class="hover:text-white">Download</a>
+            <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<div id="lightbox" class="hidden fixed inset-0 z-50 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button id="lightbox-close" class="absolute top-4 right-4 p-2 text-gray-300 hover:text-white" aria-label="Close"><i data-lucide="x" class="w-7 h-7"></i></button>
+    <img id="lightbox-img" src="" alt="" class="rounded-lg shadow-2xl">
+</div>
+
+<script>
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        const open = menu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', open);
+    });
+
+    // Click a screenshot to see it full size
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    function closeLb() { lb.classList.add('hidden'); lb.classList.remove('flex'); lbImg.src = ''; }
+    document.querySelectorAll('img.zoomable').forEach(img => img.addEventListener('click', () => {
+        lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt;
+        lb.classList.remove('hidden'); lb.classList.add('flex');
+    }));
+    lb.addEventListener('click', e => { if (e.target !== lbImg) closeLb(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+
+</body>
+</html>
