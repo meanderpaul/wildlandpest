@@ -7,7 +7,7 @@
 <script>
   (function () {
     var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
-    var sections = ['baio', 'mobile', 'standalone', 'scanner', 'download', 'faq', 'contact'];
+    var sections = ['baio', 'mobile', 'standalone', 'roadmap', 'scanner', 'download', 'faq', 'contact'];
     if (sections.indexOf(path) !== -1) {
       try { sessionStorage.setItem('wildlandpest-section', path); } catch (err) {}
       window.location.replace('/');
