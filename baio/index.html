@@ -65,7 +65,7 @@
         .scanline { animation: scan 2.4s ease-in-out infinite; }
         @keyframes scan { 0%,100% { transform: translateY(0); } 50% { transform: translateY(46px); } }
         /* Screenshot frames */
-        .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; background: #18241f; }
+        .shot img { display: block; width: 100%; height: auto; background: #18241f; }
         .phone img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; background: #18241f; }
         .zoomable { cursor: zoom-in; }
         #lightbox { background: rgba(5,9,8,.92); }
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="mt-14">
-            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Dashboard</span></div><img src="/screenshots/baio-dashboard.png" alt="BAIO dashboard" loading="lazy" class="zoomable"></figure>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Today</span></div><img src="/screenshots/baio-dashboard.webp" alt="BAIO dashboard" loading="lazy" width="1600" height="900" class="zoomable"></figure>
         </div>
     </div>
 </section>
@@ -128,45 +128,27 @@
             <div>
                 <i data-lucide="calendar-clock" class="w-7 h-7 text-moss-400"></i>
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Customers &amp; service</h2>
-                <p class="mt-4 text-gray-400">Customer records, recurring service due dates, scheduled routes and a call log. Track station counts and bait types per account.</p>
+                <p class="mt-4 text-gray-400">Customer records, recurring service due dates, scheduled routes and a call log. Track station counts and bait types per account, with full service history on every customer.</p>
             </div>
-            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Customers</span></div><img src="/screenshots/baio-customers.png" alt="BAIO customer list with service due dates" loading="lazy" class="zoomable"></figure>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Customers</span></div><img src="/screenshots/baio-customers.webp" alt="BAIO customer page with service history and actions" loading="lazy" width="1600" height="900" class="zoomable"></figure>
         </div>
 
         <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
             <div class="lg:order-2">
+                <i data-lucide="route" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Schedule &amp; routes</h2>
+                <p class="mt-4 text-gray-400">See who is due by zone, check them off and schedule them in one go. Then drag stops onto each technician on the routes board, and their phone picks it up on the next sync.</p>
+            </div>
+            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Schedule &amp; Routes</span></div><img src="/screenshots/baio-service-due.webp" alt="BAIO Service Due list grouped by zone" loading="lazy" width="1600" height="900" class="zoomable"></figure></div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
                 <i data-lucide="kanban-square" class="w-7 h-7 text-moss-400"></i>
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Sales pipeline</h2>
                 <p class="mt-4 text-gray-400">Move leads from inquiry to appointment to won on a board. Won leads become sold jobs, and a leaderboard keeps the team honest.</p>
             </div>
-            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Sales</span></div><img src="/screenshots/baio-sales.png" alt="BAIO sales pipeline board" loading="lazy" class="zoomable"></figure></div>
-        </div>
-
-        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
-            <div>
-                <i data-lucide="wallet" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Billing</h2>
-                <p class="mt-4 text-gray-400">See unpaid customers, log payment errors and read AR aging in one place instead of across spreadsheets.</p>
-            </div>
-            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Billing</span></div><img src="/screenshots/baio-billing.png" alt="BAIO billing screen with AR aging" loading="lazy" class="zoomable"></figure>
-        </div>
-
-        <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
-            <div class="lg:order-2">
-                <i data-lucide="badge-dollar-sign" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Commissions to payroll</h2>
-                <p class="mt-4 text-gray-400">Split commissions between the seller and the tech who did the work, add manager overrides, withhold or deduct, then send the lines straight to payroll.</p>
-            </div>
-            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Commissions</span></div><img src="/screenshots/baio-commissions.png" alt="BAIO commissions screen" loading="lazy" class="zoomable"></figure></div>
-        </div>
-
-        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
-            <div>
-                <i data-lucide="clock" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Team &amp; time</h2>
-                <p class="mt-4 text-gray-400">One employee list with time clock, time off, PTO accrual and payroll, so office and field staff are all in the same system.</p>
-            </div>
-            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Team</span></div><img src="/screenshots/baio-team.png" alt="BAIO team and time clock screen" loading="lazy" class="zoomable"></figure>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Sales</span></div><img src="/screenshots/baio-sales.webp" alt="BAIO sales pipeline board" loading="lazy" width="1600" height="900" class="zoomable"></figure>
         </div>
 
         <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
@@ -175,7 +157,42 @@
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Inventory &amp; trucks</h2>
                 <p class="mt-4 text-gray-400">Shop and vehicle stock, low-stock alerts, purchase orders and movement history. Services carry a bill of materials that deducts on each visit.</p>
             </div>
-            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Inventory</span></div><img src="/screenshots/baio-inventory.png" alt="BAIO inventory screen with shop and truck stock" loading="lazy" class="zoomable"></figure></div>
+            <div class="lg:order-1"><figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Inventory</span></div><img src="/screenshots/baio-inventory.webp" alt="BAIO shop stock list with quantities and reorder actions" loading="lazy" width="1600" height="900" class="zoomable"></figure></div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
+                <i data-lucide="bar-chart-3" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Reports</h2>
+                <p class="mt-4 text-gray-400">Customer growth, projected and actual revenue, and active customers and stations by bait type, all built from the records you already keep.</p>
+            </div>
+            <figure class="shot rounded-xl overflow-hidden bg-ink-900 border border-white/10 glow"><div class="flex items-center gap-2 px-4 h-9 bg-ink-800 border-b border-white/5"><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-white/10"></span><span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span><span class="ml-2 font-mono text-[11px] text-gray-500 truncate">BAIO — Reports</span></div><img src="/screenshots/baio-reports.webp" alt="BAIO reports overview" loading="lazy" width="1600" height="900" class="zoomable"></figure>
+        </div>
+
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Also in BAIO</h2>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="wallet" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Billing</h3>
+                    <p class="mt-2 text-sm text-gray-400">See unpaid customers, log payment errors and read AR aging in one place instead of across spreadsheets.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="badge-dollar-sign" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Commissions to payroll</h3>
+                    <p class="mt-2 text-sm text-gray-400">Split commissions between the seller and the tech who did the work, add manager overrides, withhold or deduct, then send the lines straight to payroll.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="clock" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Team &amp; time</h3>
+                    <p class="mt-2 text-sm text-gray-400">One employee list with time clock, time off, PTO accrual and payroll, so office and field staff are all in the same system.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="car-front" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Fleet</h3>
+                    <p class="mt-2 text-sm text-gray-400">Vehicle maintenance, insurance, registrations and inspections, with overdue and coming-up items flagged before they bite.</p>
+                </article>
+            </div>
         </div>
 
         <div class="bg-ink-900 border border-white/5 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">

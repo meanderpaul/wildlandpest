@@ -13,7 +13,7 @@ Each page file starts with a small header block:
 Anything after a line containing <!-- @scripts --> is placed at the end of <body>.
 Anything after a line containing <!-- @head --> (and before @scripts) goes in <head>.
 
-Screenshot shortcodes (images live in /screenshots/):
+Screenshot shortcodes (images live in /screenshots/, 1600x900 webp):
     [[shot file.png | Alt text | Window label]]   desktop window frame
     [[phone file.png | Alt text]]                 phone frame
 
@@ -58,7 +58,7 @@ def shot(m):
         '<span class="w-2.5 h-2.5 rounded-full bg-white/10"></span>'
         '<span class="w-2.5 h-2.5 rounded-full bg-moss-500"></span>'
         f'<span class="ml-2 font-mono text-[11px] text-gray-500 truncate">{label}</span></div>'
-        f'<img src="/screenshots/{file}" alt="{alt}" loading="lazy" class="zoomable">'
+        f'<img src="/screenshots/{file}" alt="{alt}" loading="lazy" width="1600" height="900" class="zoomable">'
         "</figure>"
     )
 

@@ -15,7 +15,7 @@ path: /baio/
             </div>
         </div>
         <div class="mt-14">
-            [[shot baio-dashboard.png | BAIO dashboard | BAIO — Dashboard]]
+            [[shot baio-dashboard.webp | BAIO dashboard | BAIO — Today]]
         </div>
     </div>
 </section>
@@ -27,45 +27,27 @@ path: /baio/
             <div>
                 <i data-lucide="calendar-clock" class="w-7 h-7 text-moss-400"></i>
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Customers &amp; service</h2>
-                <p class="mt-4 text-gray-400">Customer records, recurring service due dates, scheduled routes and a call log. Track station counts and bait types per account.</p>
+                <p class="mt-4 text-gray-400">Customer records, recurring service due dates, scheduled routes and a call log. Track station counts and bait types per account, with full service history on every customer.</p>
             </div>
-            [[shot baio-customers.png | BAIO customer list with service due dates | BAIO — Customers]]
+            [[shot baio-customers.webp | BAIO customer page with service history and actions | BAIO — Customers]]
         </div>
 
         <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
             <div class="lg:order-2">
+                <i data-lucide="route" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Schedule &amp; routes</h2>
+                <p class="mt-4 text-gray-400">See who is due by zone, check them off and schedule them in one go. Then drag stops onto each technician on the routes board, and their phone picks it up on the next sync.</p>
+            </div>
+            <div class="lg:order-1">[[shot baio-service-due.webp | BAIO Service Due list grouped by zone | BAIO — Schedule &amp; Routes]]</div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
                 <i data-lucide="kanban-square" class="w-7 h-7 text-moss-400"></i>
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Sales pipeline</h2>
                 <p class="mt-4 text-gray-400">Move leads from inquiry to appointment to won on a board. Won leads become sold jobs, and a leaderboard keeps the team honest.</p>
             </div>
-            <div class="lg:order-1">[[shot baio-sales.png | BAIO sales pipeline board | BAIO — Sales]]</div>
-        </div>
-
-        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
-            <div>
-                <i data-lucide="wallet" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Billing</h2>
-                <p class="mt-4 text-gray-400">See unpaid customers, log payment errors and read AR aging in one place instead of across spreadsheets.</p>
-            </div>
-            [[shot baio-billing.png | BAIO billing screen with AR aging | BAIO — Billing]]
-        </div>
-
-        <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
-            <div class="lg:order-2">
-                <i data-lucide="badge-dollar-sign" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Commissions to payroll</h2>
-                <p class="mt-4 text-gray-400">Split commissions between the seller and the tech who did the work, add manager overrides, withhold or deduct, then send the lines straight to payroll.</p>
-            </div>
-            <div class="lg:order-1">[[shot baio-commissions.png | BAIO commissions screen | BAIO — Commissions]]</div>
-        </div>
-
-        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
-            <div>
-                <i data-lucide="clock" class="w-7 h-7 text-moss-400"></i>
-                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Team &amp; time</h2>
-                <p class="mt-4 text-gray-400">One employee list with time clock, time off, PTO accrual and payroll, so office and field staff are all in the same system.</p>
-            </div>
-            [[shot baio-team.png | BAIO team and time clock screen | BAIO — Team]]
+            [[shot baio-sales.webp | BAIO sales pipeline board | BAIO — Sales]]
         </div>
 
         <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
@@ -74,7 +56,42 @@ path: /baio/
                 <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Inventory &amp; trucks</h2>
                 <p class="mt-4 text-gray-400">Shop and vehicle stock, low-stock alerts, purchase orders and movement history. Services carry a bill of materials that deducts on each visit.</p>
             </div>
-            <div class="lg:order-1">[[shot baio-inventory.png | BAIO inventory screen with shop and truck stock | BAIO — Inventory]]</div>
+            <div class="lg:order-1">[[shot baio-inventory.webp | BAIO shop stock list with quantities and reorder actions | BAIO — Inventory]]</div>
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
+            <div>
+                <i data-lucide="bar-chart-3" class="w-7 h-7 text-moss-400"></i>
+                <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">Reports</h2>
+                <p class="mt-4 text-gray-400">Customer growth, projected and actual revenue, and active customers and stations by bait type, all built from the records you already keep.</p>
+            </div>
+            [[shot baio-reports.webp | BAIO reports overview | BAIO — Reports]]
+        </div>
+
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Also in BAIO</h2>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="wallet" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Billing</h3>
+                    <p class="mt-2 text-sm text-gray-400">See unpaid customers, log payment errors and read AR aging in one place instead of across spreadsheets.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="badge-dollar-sign" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Commissions to payroll</h3>
+                    <p class="mt-2 text-sm text-gray-400">Split commissions between the seller and the tech who did the work, add manager overrides, withhold or deduct, then send the lines straight to payroll.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="clock" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Team &amp; time</h3>
+                    <p class="mt-2 text-sm text-gray-400">One employee list with time clock, time off, PTO accrual and payroll, so office and field staff are all in the same system.</p>
+                </article>
+                <article class="bg-ink-900 border border-white/5 rounded-xl p-6">
+                    <i data-lucide="car-front" class="w-6 h-6 text-moss-400"></i>
+                    <h3 class="mt-4 font-semibold text-white text-lg">Fleet</h3>
+                    <p class="mt-2 text-sm text-gray-400">Vehicle maintenance, insurance, registrations and inspections, with overdue and coming-up items flagged before they bite.</p>
+                </article>
+            </div>
         </div>
 
         <div class="bg-ink-900 border border-white/5 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">

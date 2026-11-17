@@ -65,7 +65,7 @@
         .scanline { animation: scan 2.4s ease-in-out infinite; }
         @keyframes scan { 0%,100% { transform: translateY(0); } 50% { transform: translateY(46px); } }
         /* Screenshot frames */
-        .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; background: #18241f; }
+        .shot img { display: block; width: 100%; height: auto; background: #18241f; }
         .phone img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; background: #18241f; }
         .zoomable { cursor: zoom-in; }
         #lightbox { background: rgba(5,9,8,.92); }
@@ -105,8 +105,8 @@
 
 <main>
 <section class="relative overflow-hidden grid-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-24 grid lg:grid-cols-2 gap-14 items-center">
-        <div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-24">
+        <div class="max-w-3xl">
             <p class="font-mono text-xs uppercase tracking-[.2em] text-moss-400 mb-3">In the field</p>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">BAIO Mobile</h1>
             <p class="mt-5 text-lg text-gray-400">Your techs carry BAIO on their phones. The desktop app pushes customer and station data to BAIO Mobile so bait station work can be tracked on site.</p>
@@ -119,10 +119,6 @@
             <div class="mt-8 inline-flex items-center gap-3 bg-amber-400/10 border border-amber-400/30 text-amber-400 text-sm font-medium px-4 py-2.5 rounded-md">
                 <i data-lucide="hammer" class="w-4 h-4"></i>In production. Coming to Google Play.
             </div>
-        </div>
-        <div class="flex justify-center gap-5">
-            <figure class="phone w-60 sm:w-64 shrink-0 rounded-[2.2rem] bg-ink-950 border border-white/10 p-2.5 glow"><img src="/screenshots/mobile-route.png" alt="BAIO Mobile route screen with bait stations" loading="lazy" class="zoomable rounded-[1.8rem]"></figure>
-            <div class="hidden sm:block mt-16"><figure class="phone w-60 sm:w-64 shrink-0 rounded-[2.2rem] bg-ink-950 border border-white/10 p-2.5 glow"><img src="/screenshots/mobile-truck.png" alt="BAIO Mobile truck stock screen" loading="lazy" class="zoomable rounded-[1.8rem]"></figure></div>
         </div>
     </div>
 </section>
